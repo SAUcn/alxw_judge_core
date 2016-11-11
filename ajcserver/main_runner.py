@@ -155,6 +155,9 @@ def judge_one_mem_time(solution_id, problem_id, data_num, time_limit, mem_limit,
             'calls': config.white_list,
             'files': {}
         }
+        if language == 'javascript':
+            runcfg['args'] = ['node','/home/AJC/ajcserver/runner.js',] + [runcfg['args'][0] + '.js',]
+            runcfg['java'] = True
     rst = SendAndTest(sock, runcfg)
     rst['memoryused'], rst['result'] = fix_java_mis_judge(error_path, rst['result'], rst['memoryused'], mem_limit)
     logging.debug(rst)

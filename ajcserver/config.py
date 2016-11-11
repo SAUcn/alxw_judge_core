@@ -30,13 +30,15 @@ white_list = [0,1,2,3,4,5,6,9,10,11,12,21,33,45,59,85,91,122,125,158,192,197,231
 file_name = {
     "gcc": "main.c",
     "g++": "main.cpp",
-    "java": "Main.java"
+    "java": "Main.java",
+    "javascript": "main.js"
 }
 
 build_cmd = {
     "gcc": "gcc main.c -o main -fno-asm --static -Wall -lm -std=c99 -DONLINE_JUDGE",
     "g++": "g++ main.cpp -o main -fno-asm --static -Wall -lm -std=c++0x -DONLINE_JUDGE",
-    "java": "javac -J-Xms32m -J-Xmx256m Main.java"
+    "java": "javac -J-Xms32m -J-Xmx256m Main.java",
+    "javascript": "ls"
 }
 
 re_result_code = {
